@@ -62,6 +62,7 @@
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="assets/LLAVANES-JOHNRAYMARK-M-CV.pdf" class="nav-link scrollto" download><i class="bx bx-download"></i> <span>Download my Resume</span></a></li>
           <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+           <li><a href="#contact-me" class="nav-link scrollto"><i class='bx bxs-phone-call'></i> <span>Contact me</span></a></li>
           </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -71,7 +72,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Hi! .. I'am John Raymark LLavanes</h1>
-      <p style="text-transform: uppercase;"><span class="typed" data-typed-items="Backend Developer"></span></p>
+      <p style="text-transform: uppercase;"><span class="typed" data-typed-items="Backend Developer / Software Developer"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -103,17 +104,17 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>09272042857</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Norzagaray , Bulacan</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Github Account :</strong> <span><a href="https://github.com/Marksuuuu">Marksuuuu</a></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Year/s of Experience in IT Field as Developer:</strong> <span>1 Year and Counting</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Year/s of Experience in IT Field as Developer:</strong> <span><span id="workyear-difference"></span> Year and Counting</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="year-difference"></span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>johnraymark3@gmail.com</span></li>
 
                 </ul>
               </div>
-            </div>I'm John Raymark LLavanes , Graduated in Bulacan State University , Seeking for a Job I'm Flexible to anytime schedule and I Can Handle Pressure.</p>
+            </div>I’m John Raymark Llavanes, graduate from Bulacan State University. I am currently seeking job opportunities and am eager to contribute my skills and enthusiasm to a dynamic team. I am highly flexible with my schedule and thrive in high-pressure environments. I am confident that my adaptability and resilience make me a strong candidate for roles that require dedication and a proactive approach.</p>
           </div>
         </div>
 
@@ -178,14 +179,14 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 
             <div class="progress">
-              <span class="skill">PHP <!-- <i class="val">65%</i> --></span>
+              <span class="skill">PHP (LARAVEL) <!-- <i class="val">65%</i> --></span>
               <!-- <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
               </div> -->
             </div>
 
             <div class="progress">
-              <span class="skill">AJAX/JQUERY <!-- <i class="val">65%</i> --></span>
+              <span class="skill">JAVASCRIPT/AJAX/JQUERY <!-- <i class="val">65%</i> --></span>
               <!-- <div class="progress-bar-wrap">
                 <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
               </div> -->
@@ -287,6 +288,40 @@
 
       </div>
     </section><!-- End Portfolio Section -->
+
+    <section id="contact-me" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact Me</h2>
+          <p>Send me something?. send me an email</p>
+        </div>
+
+         <div class="container">
+        <form id="emailForm">
+            <div class="form-group">
+                <label for="toEmail">From</label>
+                <input type="email" class="form-control" id="toEmail" placeholder="Enter recipient email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject" style="margin-top: 20px;">Subject</label>
+                <input type="text" class="form-control" id="subject" placeholder="Enter subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message" style="margin-top: 20px;">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+            </div>
+            <div class="form-group" style="margin-top: 20px;">
+                <label for="attachment">Attachment</label>
+                <input type="file" class="form-control-file" id="attachment" required>
+            </div>
+            <button style="margin-top: 20px;" type="submit" class="btn btn-primary">Send Email</button>
+        </form>
+        <div id="statusMessage" class="mt-3"></div>
+    </div>
+
+        </div>
+    </section><!-- End Portfolio Section -->
   
   </main><!-- End #main -->
 
@@ -305,9 +340,80 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script type="module">
+import emailjs from 'https://cdn.jsdelivr.net/npm/emailjs@4.0.3/+esm'
+</script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+   <script>
+         $(document).ready(function(){
+            function updateYearDifference() {
+                var startYear = 2000;
+                var currentDate = new Date();
+                var currentYear = currentDate.getFullYear();
+
+                // Calculate the difference between 2000 and the current year
+                var yearDifference = currentYear - startYear;
+
+                // Update the DOM
+                $('#year-difference').text(yearDifference);
+            }
+
+            // Run the function to update the year difference
+            updateYearDifference();
+
+            // Optionally, you can set an interval to check every day at midnight
+            setInterval(updateYearDifference, 24 * 60 * 60 * 1000);
+
+            function updateWorkYearDifference() {
+                var startYear = 2022;
+                var currentDate = new Date();
+                var currentYear = currentDate.getFullYear();
+
+                // Calculate the difference between 2000 and the current year
+                var yearDifference = currentYear - startYear;
+
+                // Update the DOM
+                $('#workyear-difference').text(yearDifference);
+            }
+
+            // Run the function to update the year difference
+            updateWorkYearDifference();
+
+            // Optionally, you can set an interval to check every day at midnight
+            setInterval(updateWorkYearDifference, 24 * 60 * 60 * 1000);
+
+             $('#emailForm').on('submit', function(e) {
+                e.preventDefault();
+
+                var toEmail = $('#toEmail').val();
+                var subject = $('#subject').val();
+                var message = $('#message').val();
+                var attachment = $('#attachment')[0].files[0];
+
+                var templateParams = {
+                    to_email: toEmail,
+                    subject: subject,
+                    message: message,
+                };
+
+                var formData = new FormData();
+                formData.append('file', attachment);
+                formData.append('templateParams', JSON.stringify(templateParams));
+
+                emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID')
+                    .then(function(response) {
+                        $('#statusMessage').text('Email sent successfully!').addClass('alert alert-success');
+                    }, function(error) {
+                        $('#statusMessage').text('Failed to send email.').addClass('alert alert-danger');
+                    });
+            });
+        });
+    </script>
 
 </body>
 
